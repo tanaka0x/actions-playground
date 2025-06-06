@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: with parameter
         env:
-          INPUT_NAMES: "{{ inputs.names }}"
+          INPUT_NAMES: ${{ inputs.names }}
         run: |
           echo ${INPUT_NAMES} | tr , '\n'
           
